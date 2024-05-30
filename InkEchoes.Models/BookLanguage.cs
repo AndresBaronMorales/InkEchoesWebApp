@@ -17,7 +17,7 @@ namespace InkEchoes.Models
         [ForeignKey("BookId")]
         public Book Book { get; set; }
 
-        [ForeignKey("Language")]
+        [ForeignKey("LanguageId")]
         public Language Language { get; set; }
     }
 }
