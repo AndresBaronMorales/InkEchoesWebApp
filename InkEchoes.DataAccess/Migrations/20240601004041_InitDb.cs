@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -11,21 +12,18 @@ namespace InkEchoes.DataAccess.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Books",
+                name: "Author",
                 columns: table => new
                 {
-                    BookId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ISBN = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: false),
-                    NumberPages = table.Column<int>(type: "int", nullable: false),
-                    Origin = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Editorial = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    AuthorId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Birthdate = table.Column<DateOnly>(type: "date", nullable: false),
+                    Nacionality = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Books", x => x.BookId);
+                    table.PrimaryKey("PK_Author", x => x.AuthorId);
                 });
 
             migrationBuilder.CreateTable(
@@ -65,6 +63,30 @@ namespace InkEchoes.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Languages", x => x.LanguageId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Books",
+                columns: table => new
+                {
+                    BookId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    AuthorId = table.Column<int>(type: "int", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ISBN = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
+                    NumberPages = table.Column<int>(type: "int", nullable: false),
+                    Origin = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Editorial = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Books", x => x.BookId);
+                    table.ForeignKey(
+                        name: "FK_Books_Author_AuthorId",
+                        column: x => x.AuthorId,
+                        principalTable: "Author",
+                        principalColumn: "AuthorId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -171,6 +193,11 @@ namespace InkEchoes.DataAccess.Migrations
                 column: "BookId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Books_AuthorId",
+                table: "Books",
+                column: "AuthorId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_BooksCategories_BookId",
                 table: "BooksCategories",
                 column: "BookId");
@@ -245,6 +272,9 @@ namespace InkEchoes.DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "Languages");
+
+            migrationBuilder.DropTable(
+                name: "Author");
         }
     }
 }
