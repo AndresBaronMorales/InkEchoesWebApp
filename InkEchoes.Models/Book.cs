@@ -9,9 +9,6 @@ namespace InkEchoes.Models
         public string BookId { get; set; }
 
         [Required]
-        public int AuthorId { get; set; }
-
-        [Required]
         public string Title { get; set; }
 
         [Required]
@@ -26,9 +23,6 @@ namespace InkEchoes.Models
 
         [Required]
         public string Editorial { get; set; }
-
-        [ForeignKey("AuthorId")]
-        public Author Author { get; set; }
 
         [Required]
         public decimal Price { get; set; }

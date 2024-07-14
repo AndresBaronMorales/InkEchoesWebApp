@@ -1,0 +1,15 @@
+﻿@model IEnumerable<BookTopVM>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@foreach (var i in Model)
+{
+    <h1>@i.Title</h1>    
+    <p>@i.Description</p>    
+    <p>@i.BookId</p>    
+    <p>--------------------------</p>
+}
+
