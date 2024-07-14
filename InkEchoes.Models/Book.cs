@@ -29,5 +29,8 @@ namespace InkEchoes.Models
 
         [ForeignKey("AuthorId")]
         public Author Author { get; set; }
+
+        [Required]
+        public decimal Price { get; set; }
     }
 }

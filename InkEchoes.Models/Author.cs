@@ -10,8 +10,6 @@ namespace InkEchoes.Models
         [Required]
         public string Name { get; set; }
 
-        public DateOnly Birthdate { get; set; }
-
         [Required]
         public string Nacionality { get; set; }
     }

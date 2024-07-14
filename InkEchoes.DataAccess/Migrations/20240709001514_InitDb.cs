@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -18,7 +17,6 @@ namespace InkEchoes.DataAccess.Migrations
                     AuthorId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Birthdate = table.Column<DateOnly>(type: "date", nullable: false),
                     Nacionality = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -76,7 +74,8 @@ namespace InkEchoes.DataAccess.Migrations
                     Description = table.Column<string>(type: "text", nullable: false),
                     NumberPages = table.Column<int>(type: "int", nullable: false),
                     Origin = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Editorial = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Editorial = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
