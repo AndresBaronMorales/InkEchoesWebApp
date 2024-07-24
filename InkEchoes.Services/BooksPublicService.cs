@@ -1,12 +1,10 @@
-﻿using InkEchoes.DataAccess.Repository.IRepository;
-using InkEchoes.Models;
-using InkEchoes.Models.ViewModels;
-using InkEchoes.Services.IServices;
+﻿using InkEchoes.Services.IServices;
 
 namespace InkEchoes.Services
 {
     public class BooksPublicService : IBooksPublicService
     {
+        /*
         private readonly IUnitOfWork _unitOfWork;
 
 
@@ -30,5 +28,6 @@ namespace InkEchoes.Services
         {
             throw new NotImplementedException();
         }
+        */
     }
 }
