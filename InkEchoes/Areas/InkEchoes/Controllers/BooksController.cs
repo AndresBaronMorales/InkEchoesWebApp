@@ -2,16 +2,9 @@
 
 namespace InkEchoes.Areas.InkEchoes.Controllers
 {
-    public class Home : Controller
+    public class BooksController : Controller
     {
-
-
-        public Home()
-        {
-        }
-
-
-        public IActionResult Index()
+        public IActionResult Books()
         {
             return View();
         }

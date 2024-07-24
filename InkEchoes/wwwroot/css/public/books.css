@@ -1,0 +1,141 @@
+/* Books */
+.section-books {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 400px;
+    gap: 1rem;
+    padding: 5rem 1rem 1rem 1rem;
+
+
+    .book{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        border-radius: .5rem;
+        overflow: hidden;
+
+        .book-img{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .book-info{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: .5rem;
+            width: 100%;
+            height: fit-content;
+            padding: 1rem;
+
+            h2{
+                font-size: 2rem;
+                color: var(--color-whithe);
+            }
+
+            .book-author{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+                
+                .book-author-avatar{
+                    display: block;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 100%;
+                    border: 1px solid var(--color-whithe);
+                    overflow: hidden;
+                    filter: grayscale(100%);
+                }
+
+                .book-author-avatar:hover{
+                    filter: none;
+                }
+            }
+
+            .book-author div:last-child{
+                display: flex;
+                flex-direction: column;
+                gap: .2rem;
+                font-size: .8rem;
+
+                a:hover{
+                    color: var(--color-whithe);
+                }
+            }
+
+            .book-note{
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                gap: .2rem;
+
+                span{
+                    font-size: 1.5rem;
+                    color: var(--color-whithe);
+                    padding-top: 4px;
+                }
+
+                .book-stars{
+                    position: relative;
+                    display: flex;
+    
+                    .book-stars-note{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        width: 100%;
+                        color: var(--color-whithe);
+                        overflow: hidden;
+                    }
+                }
+            }
+
+            .book-buy{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                span{
+                    font-size: 1.5rem;
+                    color: var(--color-whithe);
+                }
+
+                button{
+                    width: fit-content;
+                    padding: 10px 15px;
+                }
+            }
+
+
+        }
+    }
+}
+
+@media (min-width: 640px) { 
+    .section-books {
+        grid-auto-rows: 300px;
+    
+        .book{
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+}
+
+@media (min-width: 1024px) { 
+    .section-books {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}
+
+
+
+

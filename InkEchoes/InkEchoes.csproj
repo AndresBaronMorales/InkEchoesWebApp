@@ -21,4 +21,8 @@
     <ProjectReference Include="..\InkEchoes.Services\InkEchoes.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\css\public\" />
+  </ItemGroup>
+
 </Project>

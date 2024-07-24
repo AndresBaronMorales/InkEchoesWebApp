@@ -1,15 +1,285 @@
-﻿@model IEnumerable<BookTopVM>
-
-@{
-    ViewData["Title"] = "Home Page";
+﻿@{
+    ViewData["Title"] = "Home";
 }
 
+@section Styles{
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-@foreach (var i in Model)
-{
-    <h1>@i.Title</h1>    
-    <p>@i.Description</p>    
-    <p>@i.BookId</p>    
-    <p>--------------------------</p>
+    <!-- Syles -->
+    <link rel="stylesheet" href="~/css/public/home.css" asp-append-version="true">
 }
 
+<!-- Landing -->
+<section class="landing">
+    <div class="landing-text">
+        <h1>InkEchoes</h1>
+        <p>Turning Pages, Creating Worlds</p>
+    </div>
+</section>
+
+<!-- Top books -->
+<section class="section-top-books">
+    <!-- Slider books -->
+    <div class="swiper-top-books">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide container-img-books">
+                <div class="container-info-books">
+                    <h2>Title</h2>
+                    <p class="text-hide-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id veniam deleniti
+                        perspiciatis hic et saepe placeat doloremque, molestiae atque repellendus ad eos vero
+                        itaque? Aspernatur pariatur aliquam dolorum nam.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae obcaecati laborum
+                        illo
+                        incidunt at praesentium explicabo sapiente veritatis deleniti labore modi quas veniam
+                        quisquam qui nobis, inventore delectus consequatur dolor?
+                    </p>
+                    <div class="container-btn-slide">
+                        <button class="button-28">Read More</button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1535905557558-afc4877a26fc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                     alt="" class="img-f">
+            </div>
+            <div class="swiper-slide container-img-books">
+                <div class="container-info-books">
+                    <h2>Title</h2>
+                    <p class="text-hide-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id veniam deleniti
+                        perspiciatis hic et saepe placeat doloremque, molestiae atque repellendus ad eos vero
+                        itaque? Aspernatur pariatur aliquam dolorum nam.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae obcaecati laborum
+                        illo
+                        incidunt at praesentium explicabo sapiente veritatis deleniti labore modi quas veniam
+                        quisquam qui nobis, inventore delectus consequatur dolor?
+                    </p>
+                    <div class="container-btn-slide">
+                        <button class="button-28">Read More</button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1513001900722-370f803f498d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                     alt="" class="img-f">
+            </div>
+            <div class="swiper-slide container-img-books">
+                <div class="container-info-books">
+                    <h2>Title</h2>
+                    <p class="text-hide-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id veniam deleniti
+                        perspiciatis hic et saepe placeat doloremque, molestiae atque repellendus ad eos vero
+                        itaque? Aspernatur pariatur aliquam dolorum nam.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae obcaecati laborum
+                        illo
+                        incidunt at praesentium explicabo sapiente veritatis deleniti labore modi quas veniam
+                        quisquam qui nobis, inventore delectus consequatur dolor?
+                    </p>
+                    <div class="container-btn-slide">
+                        <button class="button-28">Read More</button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1495640452828-3df6795cf69b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                     alt="" class="img-f">
+            </div>
+            <div class="swiper-slide container-img-books">
+                <div class="container-info-books">
+                    <h2>Title</h2>
+                    <p class="text-hide-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id veniam deleniti
+                        perspiciatis hic et saepe placeat doloremque, molestiae atque repellendus ad eos vero
+                        itaque? Aspernatur pariatur aliquam dolorum nam.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae obcaecati laborum
+                        illo
+                        incidunt at praesentium explicabo sapiente veritatis deleniti labore modi quas veniam
+                        quisquam qui nobis, inventore delectus consequatur dolor?
+                    </p>
+                    <div class="container-btn-slide">
+                        <button class="button-28">Read More</button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1608099269227-82de5da1e4a8?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                     alt="" class="img-f">
+            </div>
+            <div class="swiper-slide container-img-books">
+                <div class="container-info-books">
+                    <h2>Title</h2>
+                    <p class="text-hide-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id veniam deleniti
+                        perspiciatis hic et saepe placeat doloremque, molestiae atque repellendus ad eos vero
+                        itaque? Aspernatur pariatur aliquam dolorum nam.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae obcaecati laborum
+                        illo
+                        incidunt at praesentium explicabo sapiente veritatis deleniti labore modi quas veniam
+                        quisquam qui nobis, inventore delectus consequatur dolor?
+                    </p>
+                    <div class="container-btn-slide">
+                        <button class="button-28">Read More</button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1537495329792-41ae41ad3bf0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                     alt="" class="img-f">
+            </div>
+            <div class="swiper-slide container-img-books">
+                <div class="container-info-books">
+                    <h2>Title</h2>
+                    <p class="text-hide-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id veniam deleniti
+                        perspiciatis hic et saepe placeat doloremque, molestiae atque repellendus ad eos vero
+                        itaque? Aspernatur pariatur aliquam dolorum nam.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae obcaecati laborum
+                        illo
+                        incidunt at praesentium explicabo sapiente veritatis deleniti labore modi quas veniam
+                        quisquam qui nobis, inventore delectus consequatur dolor?
+                    </p>
+                    <div class="container-btn-slide">
+                        <button class="button-28">Read More</button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1556566952-11eff3d06ed4?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                     alt="" class="img-f">
+            </div>
+        </div>
+
+        <div class="swiper-navigation-books">
+            <div class="swiper-prev-books"></div>
+            <div class="swiper-next-books"></div>
+        </div>
+
+        <div class="swiper-pagination-books"></div>
+    </div>
+
+    <div class="top-books-section">
+        <div>
+            <span>Discover</span>
+            <h2>Top Books</h2>
+        </div>
+        <p>
+            Discover unforgettable worlds within the pages.
+        </p>
+    </div>
+</section>
+
+
+<!-- Best Sellers -->
+<section class="section-best-seller">
+    <div class="seller-wrap-sticky">
+        <div class="best-seller-wrap">
+            <div class="best-seller-text">
+                <h2>Best Sellers</h2>
+                <p>Top Reads: Discover Your Next Favorite Bestseller!</p>
+            </div>
+            <a href="" class="best-seller-book">
+                <div class="seller-book-img">
+                    <img src="https://images.unsplash.com/photo-1535905557558-afc4877a26fc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                         alt="" class="img-f">
+                </div>
+                <h2>Titulo</h2>
+            </a>
+            <a href="" class="best-seller-book">
+                <div class="seller-book-img">
+                    <img src="https://images.unsplash.com/photo-1535905557558-afc4877a26fc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                         alt="" class="img-f">
+                </div>
+                <h2>Titulo</h2>
+            </a>
+            <a href="" class="best-seller-book">
+                <div class="seller-book-img">
+                    <img src="https://images.unsplash.com/photo-1535905557558-afc4877a26fc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                         alt="" class="img-f">
+                </div>
+                <h2>Titulo</h2>
+            </a>
+            <a href="" class="best-seller-book">
+                <div class="seller-book-img">
+                    <img src="https://images.unsplash.com/photo-1535905557558-afc4877a26fc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                         alt="" class="img-f">
+                </div>
+                <h2>Titulo</h2>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Authors -->
+<section class="section-authors">
+    <div>
+        <a href="" class="section-authors-item">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVvcGxlfGVufDB8fDB8fHww"
+                 alt="" class="img-f">
+            <span>Nombre</span>
+        </a>
+        <a href="" class="section-authors-item">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fHww"
+                 alt="" class="img-f">
+            <span>Nombre</span>
+        </a>
+        <a href="" class="section-authors-item">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGVvcGxlfGVufDB8fDB8fHww"
+                 alt="" class="img-f">
+            <span>Nombre</span>
+        </a>
+        <a href="" class="section-authors-item">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGVvcGxlfGVufDB8fDB8fHww"
+                 alt="" class="img-f">
+            <span>Nombre</span>
+        </a>
+        <a href="" class="section-authors-item">
+            <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D"
+                 alt="" class="img-f">
+            <span>Nombre</span>
+        </a>
+    </div>
+</section>
+
+
+<!-- Categories -->
+<section class="section-categories">
+    <section class="section-categories-title">
+        <span>C</span>
+        <span>A</span>
+        <span>T</span>
+        <span>E</span>
+        <span>G</span>
+        <span>O</span>
+        <span>R</span>
+        <span>I</span>
+        <span>E</span>
+        <span>S</span>
+    </section>
+    <section class="section-categories-items">
+        <a href="">
+            <span>Nombre</span>
+            <img src="https://images.unsplash.com/photo-1643281490538-560e55e6f3ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2F0ZWdvcmllc3xlbnwwfHwwfHx8MA%3D%3D"
+                 alt="" class="img-f">
+        </a>
+        <a href="">
+            <span>Nombre</span>
+            <img src="https://plus.unsplash.com/premium_photo-1661407296118-4c2067a49170?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2F0ZWdvcmllc3xlbnwwfHwwfHx8MA%3D%3D"
+                 alt="" class="img-f">
+        </a>
+        <a href="">
+            <span>Nombre</span>
+            <img src="https://images.unsplash.com/photo-1643473232037-08736b56178d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2F0ZWdvcmllc3xlbnwwfHwwfHx8MA%3D%3D"
+                 alt="" class="img-f">
+        </a>
+        <a href="">
+            <span>Nombre</span>
+            <img src="https://plus.unsplash.com/premium_photo-1683133640706-5cab507d216c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2F0ZWdvcmllc3xlbnwwfHwwfHx8MA%3D%3D"
+                 alt="" class="img-f">
+        </a>
+        <a href="">
+            <span>Nombre</span>
+            <img src="https://images.unsplash.com/photo-1651241956991-83b75dde3dc1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2F0ZWdvcmllc3xlbnwwfHwwfHx8MA%3D%3D"
+                 alt="" class="img-f">
+        </a>
+        <a href="">
+            <span>Nombre</span>
+            <img src="https://images.unsplash.com/photo-1553029230-2be4f5c23de8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNhdGVnb3JpZXN8ZW58MHx8MHx8fDA%3D"
+                 alt="" class="img-f">
+        </a>
+    </section>
+</section>
+
+@section Scripts{
+    <script src="~/js/public/home.js" type="module"></script>
+}
